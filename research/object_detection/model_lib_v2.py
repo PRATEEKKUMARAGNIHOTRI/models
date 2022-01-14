@@ -543,6 +543,7 @@ def train_loop(
 
   # Build the model, optimizer, and training input
   print('Model config')
+  print(type(model_config))
   print(model_config)
   print('Config done')
   strategy = tf.compat.v2.distribute.get_strategy()
