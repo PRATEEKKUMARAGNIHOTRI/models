@@ -542,6 +542,9 @@ def train_loop(
     config_util.save_pipeline_config(pipeline_config_final, model_dir)
 
   # Build the model, optimizer, and training input
+  print('Model config')
+  print(model_config)
+  print('Config done')
   strategy = tf.compat.v2.distribute.get_strategy()
   with strategy.scope():
     detection_model = MODEL_BUILD_UTIL_MAP['detection_model_fn_base'](
