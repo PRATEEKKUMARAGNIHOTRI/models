@@ -408,7 +408,8 @@ class DetectionModel(six.with_metaclass(abc.ABCMeta, _BaseClass)):
     self._groundtruth_lists[fields.BoxListFields.boxes] = groundtruth_boxes_list
     self._groundtruth_lists[
         fields.BoxListFields.classes] = groundtruth_classes_list
-    if groundtruth_weights_list:
+    #if groundtruth_weights_list:
+    if True:
       self._groundtruth_lists[fields.BoxListFields.
                               weights] = groundtruth_weights_list
     if groundtruth_confidences_list:
